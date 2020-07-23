@@ -6,11 +6,11 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+/*body*/
 body {
   background-color: rgb(235, 235, 235);
 }
-
+/*primal box*/
 .box {
   background-color: rgb(255, 255, 255);
   width: 15em;
@@ -20,14 +20,60 @@ body {
   margin-top: 10px;
   border-radius: 5px;
 }
-
+/*form class*/
 .crud {
   margin-left: 2px;
 }
 
+/*show names in html*/
 .names {
   margin-left: 10px;
   margin-top: 10px;
   font-family: roboto, sans-serif;
-  color: rgb(1, 66, 1);
+  color: rgb(18, 61, 204);
+}
+
+/*input type submit*/
+input[type='submit'] {
+  background-color: rgb(18, 61, 204);
+  color: white;
+  font-family: roboto;
+  border: none;
+  padding: 5px;
+  margin-top: 10px;
+  border-radius: 20px;
+  transition: 0.5s;
+  cursor: pointer;
+  outline: none;
+  display: block;
+  margin-left: 10px;
+}
+/*hover submit*/
+input[type='submit']:hover {
+  background-color: rgb(6, 25, 88);
+}
+
+/*input type text*/
+input[type='text'] {
+  border: 0;
+  background: rgba(255, 255, 255, 0.945);
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid rgba(53, 52, 52, 0.39);
+  padding: 14px 10px;
+  width: 100px;
+  outline: none;
+  color: rgb(65, 64, 64);
+  border-radius: 24px;
+  transition: 0.25s;
+  font-family: var(--gugi);
+}
+
+/*focus text*/
+input[type='text']:focus,
+input[type='password']:focus,
+input[type='email']:focus {
+  width: 190px;
+  border-color: rgb(18, 61, 204);
 }
