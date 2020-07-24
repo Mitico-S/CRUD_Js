@@ -5,16 +5,17 @@ var inputName = null;
 
 function start() {
   inputName = document.querySelector('#inputName');
+
   preventFormSubmit();
   activateInput();
+  render();
 }
 
 function preventFormSubmit() {
   function handleFormSubmit(event) {
     event.preventDefault();
-
-    console.log(globalNames);
   }
+
   var form = document.querySelector('form');
   form.addEventListener('submit', handleFormSubmit);
 }
@@ -22,6 +23,7 @@ function preventFormSubmit() {
 function activateInput() {
   function insertName(newName) {
     globalNames.push(newName);
+    render();
   }
 
   function handleTyping(event) {
@@ -30,6 +32,25 @@ function activateInput() {
     }
   }
 
-  inputName.focus();
   inputName.addEventListener('keyup', handleTyping);
+  inputName.focus();
+}
+
+function render() {
+  var divNames = document.querySelector('#names');
+
+  //
+  //
+  var ul = document.createElement('ul');
+
+  for (var i = 0; i < globalNames.length; i++) {
+    var currentName = globalNames[i];
+
+    var li = document.createElement('li');
+    li.textContent = currentName;
+    ul.appendChild(li);
+    console.log(globalNames);
+  }
+
+  divNames = appendChild(ul);
 }
