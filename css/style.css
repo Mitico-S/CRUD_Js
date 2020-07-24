@@ -3,7 +3,6 @@
 /*reset css*/
 * {
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 /*body*/
@@ -26,10 +25,10 @@ body {
 
 /*show names in html*/
 .names {
-  margin-left: 10px;
+  margin-left: 5px;
   margin-top: 10px;
-  font-family: roboto, sans-serif;
-  color: rgb(18, 61, 204);
+  font-family: gugi;
+  color: rgb(3, 23, 87);
 }
 
 /*input type submit*/
@@ -67,7 +66,7 @@ input[type='text'] {
   color: rgb(65, 64, 64);
   border-radius: 24px;
   transition: 0.25s;
-  font-family: var(--gugi);
+  font-family: sophia, sans-serif;
 }
 
 /*focus text*/
@@ -80,7 +79,7 @@ input[type='email']:focus {
 
 /*ul*/
 ul {
-  margin-left: 20px;
+  list-style-type: none;
 }
 
 /*input text*/
@@ -89,4 +88,21 @@ input#inputName {
   margin-top: 20px;
   display: ruby;
   margin-left: 20px;
+}
+
+/*button delete*/
+.deleteButton {
+  color: white;
+  font-family: sophia;
+  background-color: rgb(175, 5, 5);
+  border: none;
+  cursor: pointer;
+  transition: 0.8s;
+  border-radius: 2px;
+  margin-right: 2px;
+}
+
+/*hover button delete*/
+.deleteButton:hover {
+  background-color: darkred;
 }

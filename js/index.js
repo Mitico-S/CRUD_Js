@@ -37,20 +37,42 @@ function activateInput() {
 }
 
 function render() {
-  var divNames = document.querySelector('#names');
+  function createDeleteButton(index) {
+    function deleteName() {
+      globalNames.splice(index, 1);
+      render();
+    }
+    var button = document.createElement('button');
+    button.classList.add('deleteButton');
+    button.textContent = 'x';
 
-  //
-  //
+    button.addEventListener('click', deleteName);
+    return button;
+  }
+  var divNames = document.querySelector('#names');
+  divNames.innerHTML = '';
+
   var ul = document.createElement('ul');
 
   for (var i = 0; i < globalNames.length; i++) {
     var currentName = globalNames[i];
 
     var li = document.createElement('li');
-    li.textContent = currentName;
+    var button = createDeleteButton();
+
+    var span = document.createElement('span');
+    span.textContent = currentName;
+
+    li.appendChild(button);
+    li.appendChild(span);
     ul.appendChild(li);
-    console.log(globalNames);
   }
 
   divNames.appendChild(ul);
+  clearInput();
+}
+
+function clearInput() {
+  inputName.value = '';
+  inputName.focus();
 }
