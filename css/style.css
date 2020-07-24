@@ -59,6 +59,7 @@ input[type='text'] {
   background: rgba(255, 255, 255, 0.945);
   display: block;
   margin: 20px auto;
+  margin-top: 10px;
   text-align: center;
   border: 2px solid rgba(53, 52, 52, 0.39);
   padding: 14px 10px;
