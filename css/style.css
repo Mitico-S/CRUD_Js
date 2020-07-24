@@ -66,7 +66,7 @@ input[type='text'] {
   color: rgb(65, 64, 64);
   border-radius: 24px;
   transition: 0.25s;
-  font-family: sophia, sans-serif;
+  font-family: , sans-serif;
 }
 
 /*focus text*/
@@ -93,7 +93,7 @@ input#inputName {
 /*button delete*/
 .deleteButton {
   color: white;
-  font-family: sophia;
+  font-family: ;
   background-color: rgb(175, 5, 5);
   border: none;
   cursor: pointer;
@@ -102,7 +102,35 @@ input#inputName {
   margin-right: 2px;
 }
 
-/*hover button delete*/
+/*hover button chang*/
 .deleteButton:hover {
   background-color: darkred;
+}
+
+/*button updtade*/
+.updateButton {
+  color: rgb(0, 0, 0);
+  font-family: ;
+  background-color: rgb(231, 209, 7);
+  border: none;
+  cursor: pointer;
+  transition: 0.8s;
+  border-radius: 2px;
+  margin-right: 2px;
+}
+
+/*hover button update*/
+.updateButton:hover {
+  background-color: rgb(161, 146, 3);
+}
+
+/*span*/
+span {
+  cursor: pointer;
+  transition: 0.8s;
+}
+
+/*span hover*/
+span:hover {
+  color: rgb(116, 134, 10);
 }
