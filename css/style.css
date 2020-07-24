@@ -14,8 +14,7 @@ body {
 .box {
   background-color: rgb(255, 255, 255);
   width: 15em;
-  height: 30em;
-
+  height: 800px;
   margin-left: 40%;
   margin-top: 10px;
   border-radius: 5px;
@@ -77,4 +76,17 @@ input[type='password']:focus,
 input[type='email']:focus {
   width: 190px;
   border-color: rgb(18, 61, 204);
+}
+
+/*ul*/
+ul {
+  margin-left: 20px;
+}
+
+/*input text*/
+
+input#inputName {
+  margin-top: 20px;
+  display: ruby;
+  margin-left: 20px;
 }

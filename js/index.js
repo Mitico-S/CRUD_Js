@@ -52,5 +52,5 @@ function render() {
     console.log(globalNames);
   }
 
-  divNames = appendChild(ul);
+  divNames.appendChild(ul);
 }
