@@ -109,21 +109,6 @@ input#inputName {
 }
 
 /*button updtade*/
-.updateButton {
-  color: rgb(0, 0, 0);
-  font-family: ;
-  background-color: rgb(231, 209, 7);
-  border: none;
-  cursor: pointer;
-  transition: 0.8s;
-  border-radius: 2px;
-  margin-right: 2px;
-}
-
-/*hover button update*/
-.updateButton:hover {
-  background-color: rgb(161, 146, 3);
-}
 
 /*span*/
 span {
@@ -133,5 +118,5 @@ span {
 
 /*span hover*/
 span:hover {
-  color: rgb(116, 134, 10);
+  color: rgb(236, 194, 5);
 }
