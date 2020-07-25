@@ -1,24 +1,22 @@
-window.addEventListener('load', start);
-
-var globalNames = [];
-var inputName = null;
-var isEditing = false;
-var currrentIndex = null;
-
-function start() {
+window.addEventListener('load', () => {
   inputName = document.querySelector('#inputName');
 
   preventFormSubmit();
   activateInput();
   render();
-}
+});
+
+let globalNames = [];
+let inputName = null;
+let isEditing = false;
+let currrentIndex = null;
 
 function preventFormSubmit() {
   function handleFormSubmit(event) {
     event.preventDefault();
   }
 
-  var form = document.querySelector('form');
+  let form = document.querySelector('form');
   form.addEventListener('submit', handleFormSubmit);
 }
 
@@ -32,7 +30,7 @@ function activateInput() {
   }
 
   function handleTyping(event) {
-    var hasText = !!event.target.value && event.target.value.trim() !== '';
+    let hasText = !!event.target.value && event.target.value.trim() !== '';
 
     if (!hasText) {
       clearInput();
@@ -60,9 +58,10 @@ function render() {
   function createDeleteButton(index) {
     function deleteName() {
       globalNames.splice(index, 1);
+
       render();
     }
-    var button = document.createElement('button');
+    let button = document.createElement('button');
     button.classList.add('deleteButton');
     button.textContent = 'x';
 
@@ -77,23 +76,23 @@ function render() {
       isEditing = true;
       currentIndex = index;
     }
-    var span = document.createElement('span');
+    let span = document.createElement('span');
     span.textContent = name;
     span.addEventListener('click', addItem);
 
     return span;
   }
-  var divNames = document.querySelector('#names');
+  let divNames = document.querySelector('#names');
   divNames.innerHTML = '';
 
-  var ul = document.createElement('ul');
+  let ul = document.createElement('ul');
 
-  for (var i = 0; i < globalNames.length; i++) {
-    var currentName = globalNames[i];
+  for (let i = 0; i < globalNames.length; i++) {
+    let currentName = globalNames[i];
 
-    var li = document.createElement('li');
-    var button = createDeleteButton();
-    var span = createSpan(currentName, i);
+    let li = document.createElement('li');
+    let button = createDeleteButton();
+    let span = createSpan(currentName, i);
 
     li.appendChild(button);
     li.appendChild(span);
